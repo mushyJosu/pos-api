@@ -3,9 +3,7 @@
 API REST de punto de venta para negocios pequeños: permite registrar usuarios, administrar un catálogo de productos y registrar ventas con descuento automático de inventario. Desarrollada como proyecto de Aplicaciones Móviles para ser consumida desde una app Android (Kotlin + Jetpack Compose).
 
 ## Demo en línea
-
-- **API:** https://TU-SERVICIO.onrender.com
-- **Documentación interactiva (Swagger):** https://TU-SERVICIO.onrender.com/docs
+- **API con Documentación interactiva (Swagger):** https://point-of-sale-api-dtfo.onrender.com/docs
 
 > La API usa un plan gratuito: si estuvo inactiva, la primera petición puede tardar cerca de un minuto en responder.
 

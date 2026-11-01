@@ -39,3 +39,13 @@ def update(db: Session, product: Product, values: dict) -> Product:
 def delete(db: Session, product: Product) -> None:
     db.delete(product)
     db.commit()
+
+def get_many_for_update(db: Session, owner_id: int, product_ids: list[int]) -> list[Product]:
+    query =(
+        select(Product)
+        .where(Product.owner_id == owner_id, Product.id.in_(product_ids))
+        .with_for_update()
+    )
+    return list(db.scalars(query))
+
+

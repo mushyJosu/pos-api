@@ -15,7 +15,7 @@ from app.modules.products import models as _products_models  # noqa: F401
 from app.modules.sales import models as _sales_models  # noqa: F401
 from app.modules.categories.router import router as categories_router
 from app.modules.products.router import router as products_router
-
+from app.modules.sales.router import router as sales_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
@@ -32,6 +32,7 @@ app = FastAPI(
 app.include_router(auth_router)
 app.include_router(categories_router)
 app.include_router(products_router)
+app.include_router(sales_router)
 
 @app.get("/health", tags=["Health"])
 def health(db: Session = Depends(get_db)):
